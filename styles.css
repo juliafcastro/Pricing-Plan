@@ -1,0 +1,133 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(79, 79, 79);
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.pricing-plan {
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.plan-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+span {
+  font-size: 48px;
+}
+
+.plan-price {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.plan-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.plan-features {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.plan-features li {
+  margin-bottom: 20px;
+}
+
+.plan-button:hover {
+  transition: background-color 0.3s, color 0.1s;
+  background-color: #222;
+  color: #fff;
+}
+
+.pricing-plan:hover {
+  transition: transform 0.5s, background-color 0.3s;
+  transform: translateY(-10px);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6);
+  background-color: #444;
+}
+
+@media (max-width: 1250px) {
+  body {
+     overflow-y: auto;
+     min-height: 100vh;
+
+  }
+  .pricing-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 0;
+    overflow-y: auto;
+  }
+
+  .pricing-container {
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .pricing-plan {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .plan-title {
+    font-size: 20px;
+  }
+
+  .plan-features li {
+    margin-bottom: 10px;
+  }
+
+
+  .plan-price {
+    font-size: 12px;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
